@@ -20,7 +20,11 @@ dependencies {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "file://home/realjenius/Projects/realjenius-maven/repo")
+            repository(url: "file:///home/realjenius/Projects/realjenius-maven/repo")
+            pom.version = version
+            pom.artifactId = rootProject.name
+            pom.groupId = "realjenius.jackson-databind"
         }
+
     }
 }
