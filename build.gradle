@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = '2.3.2'
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+dependencies {
+    compile "com.fasterxml.jackson.core:jackson-core:2.3.2"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.3.2"
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://home/realjenius/Projects/realjenius-maven/repo")
+        }
+    }
+}
